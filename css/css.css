@@ -1,0 +1,388 @@
+/*-------------------------导航栏------------------------------------*/
+.navbar {
+    background:url(../images/地球-导航栏.jpg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.baise{                     /*-----------------------弹出框---------------------*/
+    color: #ffffff;
+    font-family: 宋体;
+     font-size: 12px;
+}
+.navbar a {
+    color: rgb(248, 241, 241);
+    font-family: 宋体;
+    font-size: 15px;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin: 0 10px;
+    position: relative;
+    transition: all 0.3s ease;
+    
+}
+
+.navbar a:hover {
+    background-color: rgb(255, 255, 255);
+    color: #333;
+    border-radius: 5px;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+/*全图*/
+
+
+
+/*---------------------登录部分--------------------*/
+.dl{
+    background-color: rgb(56, 188, 62);
+
+}
+/*---------------------------登录界面-----------------------*/
+  body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+  }
+
+  .login-box {
+    width: 400px;
+    margin: 100px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .login-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .login-box input[type="text"],
+  .login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .login-box input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .login-box input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+
+  .login-box p {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .login-box p a {
+    color: #4CAF50;
+  }  
+  .lijizhuce{
+    font-family: 微软雅黑;
+    font-size: 20px;
+  }
+/*--------------------------------鼠标经过横线--------------------------------------*/
+a {
+    position: relative; /* 相对定位 */
+  }
+  
+  a::before {
+    content: ''; /* 插入一个空的伪元素 */
+    position: absolute; /* 绝对定位 */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* 宽度为文本宽度 */
+    height: 2px; /* 横线高度 */
+    background-color: rgb(195, 0, 255); /* 横线颜色 */
+    transform: scaleX(0); /* 初始时不显示 */
+    transition: transform 0.3s ease-in-out; /* 添加过渡效果 */
+  }
+  
+  a:hover::before {
+    transform: scaleX(1); /* 鼠标经过时显示 */
+  }
+  /*---------------------------只在正文中使用-----------------------------*/
+  .underline-hover {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    font-family:宋体;
+    font-size: 20px;
+    
+  }
+  
+  .underline-hover:hover {
+    text-decoration: underline;
+  }
+  
+  .underline-hover:hover::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+    height: 3px;
+    background-color: #000000;
+    transition: width 0.3s;
+  }
+  .tu1{
+ 
+    background: url(../images/火箭发射-p标签.jpg);
+    background-size: 1600px;
+    border: #ffffff;
+  
+  }
+  /*-----------------------------------彩色渐变横线---------------------------------------*/
+  .blockquote{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .blockquote::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    transition: width 0.3s ease-out, background-position 0.3s ease-out;
+    background-position: 0 0;
+  }
+  
+  .blockquote:hover::before {
+    width: 100%;
+    background-position: 100% 0;
+  }
+  
+  /*轮播图*/
+  .banner-container{
+    width:1200px;
+    height:400px;
+    margin:0px auto;
+    position:relative;
+    overflow: hidden;/*用于隐藏超出展示容器的内容部分*/
+}
+.banner-image-container{
+    width:6000px;
+    height:400px;
+    margin:0px auto;
+    animation:text 30s infinite  linear;
+    font-size:0px;/*消除图片间隔*/
+    
+}
+.banner-image-container img{
+    width:1200px;
+    height:400px;
+    float:left;
+}
+
+/* ---------------------轮播图关键帧---------------------------------- */
+@keyframes text {          /*0%-20%是播放下一个图片，0%-10%是图片暂停的时间*/
+    0%,10%{
+        /* margin-left:0px; */
+        transform: translateX(0px);
+    }
+    20%,30%{
+        /* margin-left:-1200px; */
+        transform: translateX(-1200px);
+    }
+    40%,50%{
+        /* margin-left:-2400px; */
+        transform: translateX(-2400px);
+    }
+    60%,70%{
+        /* margin-left:-3600px; */
+        transform: translateX(-3600px);
+    }
+    80%,90%{
+        /* margin-left:-4800px; */
+        transform: translateX(-4800px);
+    }
+    100%,110%{
+        /* margin-left: 0px; */
+        transform: translateX(0px);
+    }
+}
+/*----------------------div盒子----------------------------------*/
+.introduction {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+	background-color: #f2f2f2;
+}
+
+.media-container {
+	flex: 1;
+	margin-right: 20px;  /*-50px-*/
+	display: flex;
+	flex-direction: column;
+}
+
+.media-container video,
+.media-container img {
+	width: 90%;
+	height: auto;
+	border-radius: 5px;
+}
+
+.text-container {
+	flex: 1;
+}
+
+.text-container h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+.text-container p {
+	font-size: 18px;
+	line-height: 1.5;
+}
+/*--------------------p标签鼠标经过时的特效----------------------------*/
+
+.underline {
+  position: relative; /* 为伪元素设置绝对定位，需要相对定位的父元素 */
+  display: inline-block; /* 使下划线只占据文字的宽度 */
+}
+
+.underline::before {
+  content: ""; /* 必须添加 content 属性，否则伪元素不会显示 */
+  position: absolute; /* 将伪元素设置为绝对定位 */
+  bottom: 0; /* 将伪元素定位到文字底部 */
+  left: 0; /* 从左侧开始显示下划线 */
+  width: 100%; /* 设置下划线宽度为与文字一致 */
+  height: 2px; /* 设置下划线高度 */
+  background-color: #000; /* 设置下划线颜色为黑色 */
+  transform: scaleX(0); /* 初始状态下将下划线缩小为0 */
+  transform-origin: center; /* 将缩放点设置为下划线中心 */
+  transition: transform 0.43s ease-in-out; /* 添加过渡效果 */
+}
+
+.underline:hover::before {
+  transform: scaleX(1); /* 鼠标经过时将下划线放大 */
+}
+
+/*h标签鼠标经过时的特效*/
+.two {
+  position: relative; /* 设置相对定位 */
+  display: inline-block; /* 设置为行内块元素 */
+}
+
+.two::before, .two::after {
+  content: ""; /* 添加内容 */
+  position: absolute; /* 设置绝对定位 */
+  bottom: 0; /* 设置在底部 */
+  width: 0; /* 初始状态下没有线 */
+  height: 2px; /* 下划线高度 */
+  transition: width 0.2s ease-in-out; /* 添加过渡效果 */
+}
+
+.two::before {
+  left: 0; /* 左侧下划线 */
+  background: linear-gradient(to right, #f00, #00f); /* 添加彩色渐变背景 */
+}
+
+.two::after {
+  right: 0; /* 右侧下划线 */
+  background: linear-gradient(to left, #f00, #00f); /* 添加彩色渐变背景 */
+}
+
+.two:hover::before, .two:hover::after {
+  width: 50%; /* 鼠标经过时下划线慢慢变宽 */
+}
+
+/*---------------------提醒(没有用了)-----------------------------*/
+.tixi{
+          font-size: 60px;
+          font-family:宋体;
+          color: #020000;
+
+}
+/*文本调试*/
+.blockquote {
+  font-style: italic; /* 设置引用文本为斜体 */
+  border-left: 4px solid #ccc; /* 添加引用框线 */
+  padding: 0 0 0 1rem; /* 设置引用框内边距 */
+  font-family: 微软雅黑;
+  color: #000;
+  font-size: 50px;
+}
+/*-------------------计时器-----------------------------*/
+/*这段body动不了*/ 
+body {
+  text-align: center;
+  font-size: auto;
+  margin-top: auto;
+
+}
+/*（脉冲计时）
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#timer {
+  animation: pulse 1s ease-in-out infinite;
+  font-size: 50px;
+}
+*/
+#timer {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/*------------版权信息----------*/
+.footr{
+  background-color: #ffffff;
+  font-size: auto;
+  background: #000;
+  
+}
+.footp{
+  font-size: 20px;
+  font-family: SF Pro;
+  color: #ffffff;
+}
+
